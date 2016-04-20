@@ -41,6 +41,7 @@ namespace AmadeusW.KindleNav
         {
             await Location.Stop();
             await ExtendedExecution.Stop();
+            await WebServer.Stop();
         }
 
 
