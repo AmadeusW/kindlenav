@@ -11,7 +11,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
             <RowDefinition Height="100"/>
-            <RowDefinition Height="200"/>
+            <RowDefinition Height="300"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -28,10 +28,13 @@
                 Foreground="{ThemeResource ApplicationForegroundThemeBrush}"
                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                 Grid.Row="1" Grid.Column="1" Click="stopButton_Click" />
-        <TextBlock x:Name="statusTextBlock" 
+        <ScrollViewer HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                Grid.Row="2" Grid.ColumnSpan="2">
+            <TextBlock x:Name="statusTextBlock" 
                 Margin="5"
                 Text=""
                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                 Grid.Row="2" Grid.ColumnSpan="2" />
+        </ScrollViewer>
     </Grid>
 </Page>
