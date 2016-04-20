@@ -1,4 +1,5 @@
 ﻿using AmadeusW.KindleNav.Device;
+using AmadeusW.KindleNav.Server;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -33,6 +34,7 @@ namespace AmadeusW.KindleNav
         {
             await Location.Start();
             await ExtendedExecution.Start();
+            await WebServer.Start();
         }
 
         private async void stopButton_Click(object sender, RoutedEventArgs e)
