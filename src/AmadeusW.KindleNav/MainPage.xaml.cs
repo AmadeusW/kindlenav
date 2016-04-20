@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AmadeusW.KindleNav.Device;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,21 @@ namespace AmadeusW.KindleNav
         public MainPage()
         {
             this.InitializeComponent();
+            Logger.RegisterControl(statusTextBlock);
         }
+
+        private async void startButton_Click(object sender, RoutedEventArgs e)
+        {
+            await Location.Start();
+            await ExtendedExecution.Start();
+        }
+
+        private async void stopButton_Click(object sender, RoutedEventArgs e)
+        {
+            await Location.Stop();
+            await ExtendedExecution.Stop();
+        }
+
+
     }
 }
